@@ -48,7 +48,7 @@ class Klass
 	function defaultHtaccess() {
 		
 		// flush_rewrite_rules();
-		$rules = file_get_contents(ABSPATH."backup.htaccess");
+		$rules = file_get_contents(ABSPATH."donotmodifymanuallybackup.htaccess");
 		file_put_contents(ABSPATH.".htaccess",$rules);
 	}
 	function angularPressHtaccess(){
@@ -57,13 +57,13 @@ class Klass
 		function flush_the_htaccess_file() {
 			global $wp_rewrite;
 			$wp_rewrite->flush_rules();
-			file_put_contents(ABSPATH."debugflush.txt","flushed");
+			// file_put_contents(ABSPATH."debugflush.txt","flushed");
 
 		}
 		add_action('admin_init', 'flush_the_htaccess_file'); 
 	}
 	function ModifyRewrites($rulesOriginal) {
-		file_put_contents(ABSPATH."backup.htaccess",$rulesOriginal); //parse_url(home_url())['path']..
+		file_put_contents(ABSPATH."donotmodifymanuallybackup.htaccess",$rulesOriginal); //parse_url(home_url())['path']..
 		file_put_contents(ABSPATH.".htaccess",""); //parse_url(home_url())['path']..
 		$rulesUpdated = $rulesOriginal;
 		$rulesHead = '# Modified by ' . "angularpress". "\n";
