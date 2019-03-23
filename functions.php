@@ -53,6 +53,7 @@ class Klass
 	}
 	function angularPressHtaccess(){
 		add_filter('mod_rewrite_rules', array($this, 'ModifyRewrites'), 20, 1);
+
 		function flush_the_htaccess_file() {
 			global $wp_rewrite;
 			$wp_rewrite->flush_rules();
@@ -83,7 +84,7 @@ class Klass
 		// $this->AddAccessControlHeaders($rules);
 
 		if ($this->UpdateEntryPointRules($rules)) {
-			// $this->AddWpJsonRule($rules);
+			$this->AddWpJsonRule($rules);
 			// $this->AddXoApiRule($rules);
 		}
 	}
