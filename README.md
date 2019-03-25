@@ -6,7 +6,7 @@ This project makes use of the following open source projects/ tutorials :
  - https://github.com/WarriorRocker/angular-xo-material
  
 # How it works
-This standalone theme fetches posts, users and everything from a wordpress site via Wordpress REST API and display them in an angular app.
+This standalone theme fetches posts, users and everything from a wordpress site via Wordpress REST API and displays them in an angular app.
 
 # How to install
 Just download the files and use as a wordpress theme.
@@ -78,6 +78,6 @@ Running with `ng serve` we need a way to reference our local `angularxo.local` s
 
 If you run the local WordPress server from a host other than `angularxo.local` it is required that this be updated in the local environment file at `/src/environments/environment.local.ts` within the theme folder.
 
-This is necessary as Xo within WordPress will not have the opportunity to parse the index file and add this configuration dynamically using the Live Redirect Mode. Additionally it is possible to specify this configuration manually for the production environment file and use the faster Offline Redirect Mode.
+
 
 
