@@ -38,7 +38,7 @@ export class PostsService {
 
 loadPosts(): Observable<Array<Post>> {
     
-let url = "/index.php/wp-json/wp/v2/posts"; //I used my wordpress site at "localhost/xo/""
+let url = "http://angularxo.local/index.php/wp-json/wp/v2/posts"; //I used my wordpress site at "localhost/xo/""
 
 return this._http.get<Array<Post>>(url);
 }
