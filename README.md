@@ -4,7 +4,10 @@ This project makes use of the following open source projects/ tutorials :
  - https://medium.com/@factoryhr/how-to-use-wordpress-api-and-angular-2-cab636176548
  - https://github.com/WarriorRocker/angular-xo-core
  - https://github.com/WarriorRocker/angular-xo-material
- 
+
+# Requirements
+php 7 or higher.
+
 # How it works
 This standalone theme fetches posts, users and everything from a wordpress site via Wordpress REST API and displays them in an angular app.
 
